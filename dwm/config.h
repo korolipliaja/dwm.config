@@ -77,13 +77,14 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *volm[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-10%", NULL };
 static const char *volp[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+10%", NULL };
 static const char *vols[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
-static const char *librewolf[] =   { "librewolf", NULL };
+static const char *firefox[] =   { "firefox", NULL };
 static const char *telegram[] =  { "flatpak", "run", "org.telegram.desktop", NULL };
 static const char *nemo[] =      { "nemo", NULL };
 static const char *steam[] = { "steam", "steam://rungameid/730", NULL }; 
 static const char *steam9[] = { "steam", NULL }; 
 static const char *hg[] = { "xrandr", "-s", "1280x1024", NULL }; 
 static const char *gh[] = { "xrandr", "-s", "2560x1440", NULL }; 
+static const char *hhg[] = { "xrandr", "-s", "1920x1080", NULL };
 static const char *Discord[] = { "Discord", NULL };
 static const char *flameshot[] = { "flameshot", "gui", NULL };
 static const char *flameshotcb[] = { "flameshot", "full", "--clipboard", NULL };
@@ -127,13 +128,15 @@ static const Key keys[] = {
 	{ 0,                            XK_Print,  spawn,          {.v = flameshotcb } },
 	{ ALTKEY,            	        XK_F1,   spawn,          {.v = nemo } }, /* запуск nemo */
 	{ ALTKEY,             		XK_t,    spawn,          {.v = telegram } }, /* запуск telegram */
-	{ ALTKEY,             		XK_c,    spawn,          {.v = librewolf } }, /* запуск firefox */
+	{ ALTKEY,             		XK_c,    spawn,          {.v = firefox } }, /* запуск firefox */
 	{ ALTKEY,             		XK_p,    spawn,          {.v = Discord } }, /* запуск discord */
 	{ ControlMask|ShiftMask,       	XK_F7,    spawn,          {.v = steam } }, /* запуск steam cs go  */
 	{ MODKEY|ShiftMask,       	XK_i,    spawn,          {.v = steam9 } }, /* запуск steam cs go  */
 
 	{ ControlMask|ShiftMask,            	XK_F8,    spawn,          {.v = hg } }, /* запуск разрешения */
 	{ ControlMask|ShiftMask,            	XK_F12,    spawn,          {.v = gh } }, /* запуск разрешения */
+	{ ControlMask|ShiftMask,            	XK_F11,    spawn,          {.v = hhg } }, /* запуск разрешения */
+
 
 
 
